@@ -1,0 +1,520 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button{
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    
+    
+}
+
+:root{
+    --first-color: #06D6A0;
+    --second-color: #54c6eb;
+    --third-color: #52489c;
+ }
+
+
+
+
+ body{
+     background-color: var(--first-color);
+ }
+
+
+
+
+ .game_footbal{
+     max-width: 800px;
+     width: 100%;
+     margin: auto;
+ }
+
+
+ .game_footbal .level_coins{
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ .game_footbal .level_coins button{
+     padding: 10px 15px;
+     margin-left: 5px;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+ }
+
+ .game_footbal .level_coins button:first-child i{
+     color: gold;
+ }
+
+ .game_footbal .level_coins button:first-child{
+     background-color: var(--second-color);
+     box-shadow: 0px 5px 0px 0px rgba(61,149,176,1);
+ }
+
+ .game_footbal .level_coins button:last-child{
+    background-color: var(--third-color);
+    box-shadow: 0px 5px 0px 0px rgba(42,38,82,1);
+}
+
+.game_footbal .level_coins button:first-child:active{
+    background-color: rgba(61,149,176,1);
+}
+
+.game_footbal .level_coins button:last-child:active{
+    background-color: rgba(42,38,82,1);
+}
+
+
+
+
+
+
+
+.game_footbal .level{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #06d69e;
+}
+
+.game_footbal .level .levels{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.game_footbal .level .back_level{
+    position: relative;
+}
+
+
+.game_footbal .level .back_level button{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    margin-left: 1rem;
+}
+
+.game_footbal .level .back_level  h4{
+    text-align: center;
+    background-color: #04b183;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 10px 0;
+}
+
+
+
+
+.game_footbal .level .levels div,.img{
+    width: 100px;
+    height: 100px;
+    background-color: var(--third-color);
+    margin-right: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.game_footbal .level .levels div p{
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.game_footbal .level .levels .img{
+    position: relative;
+}
+
+.game_footbal .level .levels .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.game_footbal .level .levels .img::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    background: green;
+    border-radius: 50px;
+}
+
+.game_footbal .level .levels .img p{
+    position: absolute;
+    color: var(--third-color);
+    bottom: 0;
+    height: 50%;
+    left: 50%;
+    z-index: 10;
+    left: 0;
+    background: linear-gradient(0deg, rgba(84,198,235,1) 20%, rgba(219,74,48,0) 100%);
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+.game_footbal .curent_question{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.game_footbal .curent_question h2{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.game_footbal .curent_question p:last-child {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game_footbal .curent_question p button{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(255, 196, 0);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 0px 0px rgb(221, 170, 2);
+
+}
+
+
+
+
+.game_footbal .curent_question p button:active{
+    background-color: rgb(221, 170, 2);
+}
+
+
+
+
+
+
+.game_footbal .curent_question button{
+    
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 0px 5px 0px 0px rgb(221, 170, 2);
+
+}
+
+
+
+.game_footbal .curent_question button:active{
+    background-color: rgb(221, 170, 2);
+}
+
+
+.game_footbal .curent_question button:disabled{
+    background-color: rgb(221, 170, 2);
+}
+
+
+
+
+.game_footbal  .hint{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--first-color);
+}
+
+
+
+
+
+.game_footbal .hint .hint_coin .expose_letter,.solve_question{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    border-bottom: 1px solid white;
+    transition: .3s;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+
+.game_footbal .hint .hint_coin .expose_letter span i{
+    color: gold;
+}
+
+.game_footbal .hint .hint_coin .solve_question span i{
+    color: gold;
+}
+
+.game_footbal .hint .hint_coin .expose_letter:hover{
+    background-color: #02be8caf;
+    
+}
+
+.game_footbal .hint .hint_coin .solve_question:hover{
+    background-color: #02be8caf;
+    
+}
+
+
+
+.game_footbal .hint .hint_coin .back_hint{
+    position: relative;
+}
+
+
+.game_footbal .hint .hint_coin .back_hint h4{
+    text-align: center;
+    background-color: #04b183;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 10px 0;
+}
+
+
+.game_footbal .hint .hint_coin .back_hint button{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    margin-left: 1rem;
+}
+
+
+
+.game_footbal .curent_question .return_answer{
+    margin: 15px 0;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 10px;
+}
+
+
+.game_footbal .curent_question .answer_first{
+    margin: 15px 0;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 10px;
+}
+
+
+
+.game_footbal .curent_question .win_level{
+    text-align: center;
+}
+
+
+.game_footbal .curent_question .btn_hint{
+    text-align: center;
+}
+
+
+
+.game_footbal .curent_question .win_level .levels_wins img{
+    width: 250px;
+}
+
+
+.game_footbal .curent_question .win_level .levels_wins p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+}
+
+
+.game_footbal .curent_question .win_level .levels_wins p i{
+    color: gold;
+}
+
+
+
+.game_footbal .win{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--third-color);
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+.game_footbal .win .btn_felitari{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+
+.game_footbal .win .btn_felitari button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 0px 5px 0px 0px rgb(221, 170, 2);
+    
+}
+
+
+.game_footbal .win-1{
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    transition: .3s;
+    
+
+}
+
+
+.game_footbal .win .btn_felitari button:active{
+    background-color: rgb(221, 170, 2);
+}
+
+
+.game_footbal .win-1 .btn_felitari{
+    padding: 0 20px;
+}
+
+
+
+
+.game_footbal .win .btn_felitari h3{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.game_footbal .win-1 .btn_felitari{
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
